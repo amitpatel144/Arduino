@@ -1,0 +1,40 @@
+long randNumber;
+
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(250000);
+randomSeed(analogRead(0));
+ Serial.println("Please wait to start up the program...");
+  Serial.println("3...");
+  delay(25);
+  Serial.print("2..");
+  delay(25);
+  Serial.print("1.");
+  delay(25);
+}
+
+void loop() {
+  randNumber=random(300);
+  Serial.println("");
+  Serial.print("The value of decimal value produced of a Random Number: ");
+  Serial.print(randNumber);
+  Serial.println("");
+   Serial.print("The Hexadecimal value produced of a Random Number: ");
+    Serial.print("");
+   Serial.print(randNumber,HEX);
+   Serial.println("");
+     Serial.print("The Octal value produced of a Random Number: ");
+    Serial.print(randNumber,OCT);
+    Serial.println("");
+      Serial.print("The Binary value produced of a Random Number: ");
+     Serial.print(randNumber,BIN);
+  
+   randNumber=random(10,20);
+  Serial.println(randNumber);
+  Serial.print(randNumber,HEX);
+  Serial.print(            randNumber,BIN);
+  Serial.print(                       randNumber,OCT);
+  Serial.print(                                     randNumber,DEC);
+ // put your main code here, to run repeatedly:
+
+}
